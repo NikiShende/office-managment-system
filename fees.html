@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fees Details</title>
+    <link rel="stylesheet" href="fees.css">
+</head>
+<body>
+
+    <main>
+        <h1>Fees Details</h1>
+        <div class="card">
+            <div class="innercard">
+                <div class="studinfo">
+                       <div class="name">
+                            <label for="">Student Name:</label>
+                            <p>John erty</p>
+                            <br><br>
+                      </div>
+                     <div class="college">
+                            <label for="">College Name:</label>
+                            <p>prec loni</p>
+                            <br><br>
+                     </div>
+                    <div class="course">
+                            <label for="">Course Name:</label>
+                            <p>Computer Science</p>
+                            <br><br>
+                   </div>
+                   <div class="mob">
+
+                    <label for="">Student Mobile No:</label>
+                    <p>9234567890</p>
+                    <br><br>
+                </div>
+        </div>
+
+
+
+
+
+                <div class="fes">
+                    <div class="fee">
+                        <label for="">Total Fees:</label>
+                        <p>34560-/</p>
+                        <br><br>
+                    </div>
+                    <div class="paid">
+                        <label for="">Fees Paid:</label>
+                        <p>10000-/</p>
+                        <br><br>
+                    </div>
+                    <div class="paid">
+                        <label for="">Fees Remaining:</label>
+                        <p>24560-/</p>
+                        <br><br>
+                    </div>
+            </div>
+              <div class="installl">
+                        <div class="nextinst">
+                            <label for="">Next Installment:</label>
+                            <p>4000-/</p>
+                            <button>Pay</button>
+                            
+                        </div>
+                       
+                        <div class="date">
+                            <label for="">Date:</label>
+                            <p>23/12/2024</p>
+                            <br><br>
+                        </div>
+            </div>
+
+
+
+
+
+
+
+                <div class="transaction-history">
+                    <h2>Transaction History</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Payment Mode</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TXN12345</td>
+                                <td>01/12/2024</td>
+                                <td>5000-/</td>
+                                <td>Online</td>
+                            </tr>
+                            <tr>
+                                <td>TXN12346</td>
+                                <td>15/12/2024</td>
+                                <td>5000-/</td>
+                                <td>Cash</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br><br>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- <script>
+        // Fetch fee details from the server
+        async function fetchFeeDetails() {
+            const response = await fetch('http://localhost:3000/api/fees');
+            const data = await response.json();
+    
+            // Populate the fields with data
+            document.querySelector('.fee input').value = data.totalFees;
+            document.querySelector('.paid input').value = data.paid;
+            document.querySelector('.paid:last-child input').value = data.remaining;
+            document.querySelector('.nextinst input').value = data.nextInstallment;
+            document.querySelector('.date input').value = data.date;
+    
+            // Populate the transaction table
+            const transactionTable = document.querySelector('.transaction-history tbody');
+            transactionTable.innerHTML = '';
+            data.transactions.forEach(transaction => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${transaction.id}</td>
+                    <td>${transaction.date}</td>
+                    <td>${transaction.amount}</td>
+                    <td>${transaction.mode}</td>
+                `;
+                transactionTable.appendChild(row);
+            });
+        }
+    
+        fetchFeeDetails();
+    </script> -->
+    
+
+</body>
+</html>
